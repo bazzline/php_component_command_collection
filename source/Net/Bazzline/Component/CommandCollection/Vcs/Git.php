@@ -48,12 +48,6 @@ class Git extends Command
      */
     public function create($source, $destination)
     {
-        if (file_exists($destination)) {
-            throw new RuntimeException(
-                'given destination exists already'
-            );
-        }
-
         return $this->execute('/usr/bin/git clone ' . $source . ' ' . $destination);
     }
 
