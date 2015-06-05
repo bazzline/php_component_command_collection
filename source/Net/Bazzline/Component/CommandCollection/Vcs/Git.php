@@ -18,7 +18,7 @@ class Git extends Command
      */
     public function __invoke()
     {
-        return $this->execute('/usr/bin/git');
+        return $this->execute('/usr/bin/env git');
     }
 
     /**
@@ -32,7 +32,7 @@ class Git extends Command
 
         $currentWorkingDirectory = getcwd();
         chdir($source);
-        $return = $this->execute('/usr/bin/git checkout ' . $branch);
+        $return = $this->execute('/usr/bin/env git checkout ' . $branch);
         chdir($currentWorkingDirectory);
 
         return $return;
@@ -48,7 +48,7 @@ class Git extends Command
      */
     public function create($source, $destination)
     {
-        return $this->execute('/usr/bin/git clone ' . $source . ' ' . $destination);
+        return $this->execute('/usr/bin/env git clone ' . $source . ' ' . $destination);
     }
 
     /**
@@ -61,7 +61,7 @@ class Git extends Command
 
         $currentWorkingDirectory = getcwd();
         chdir($source);
-        $return = $this->execute('/usr/bin/git tag -l');
+        $return = $this->execute('/usr/bin/env git tag -l');
         chdir($currentWorkingDirectory);
 
         return $return;
@@ -78,7 +78,7 @@ class Git extends Command
 
         $currentWorkingDirectory = getcwd();
         chdir($source);
-        $return = $this->execute('/usr/bin/git pull');
+        $return = $this->execute('/usr/bin/env git pull');
         chdir($currentWorkingDirectory);
 
         return $return;

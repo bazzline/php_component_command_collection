@@ -32,7 +32,7 @@ class Remove extends Command
      */
     public function remove($source, $recursive = true)
     {
-        return $this->execute('/usr/bin/rm -f' . ($recursive ? 'r' : '') . ' ' . $source);
+        return $this->execute('/usr/bin/env rm -f' . ($recursive ? 'r' : '') . ' ' . $source);
     }
 
     /**

@@ -50,7 +50,7 @@ class Copy extends Command
             );
         }
 
-        return $this->execute('/usr/bin/cp ' . ($recursive ? '-r ' : '') . $source . ' ' . $destination);
+        return $this->execute('/usr/bin/env cp ' . ($recursive ? '-r ' : '') . $source . ' ' . $destination);
     }
 
     /**

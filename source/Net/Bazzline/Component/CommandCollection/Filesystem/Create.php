@@ -37,7 +37,7 @@ class Create extends Command
             );
         }
 
-        return $this->execute('/usr/bin/mkdir ' . ($recursive ? '-p ' : '') . $destination);
+        return $this->execute('/usr/bin/env mkdir ' . ($recursive ? '-p ' : '') . $destination);
     }
 
     /**

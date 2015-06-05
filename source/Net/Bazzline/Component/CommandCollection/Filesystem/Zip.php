@@ -32,7 +32,7 @@ class Zip extends Command
      */
     public function zip($archiveName, array $items)
     {
-        $command = '/usr/bin/zip -r ' . $archiveName . ' ' . implode(' ' , $items);
+        $command = '/usr/bin/env zip -r ' . $archiveName . ' ' . implode(' ' , $items);
 
         return $this->execute($command);
     }

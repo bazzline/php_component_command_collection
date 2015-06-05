@@ -44,7 +44,7 @@ class Move extends Command
             );
         }
 
-        return $this->execute('/usr/bin/mv ' . $source . ' ' . $destination);
+        return $this->execute('/usr/bin/env mv ' . $source . ' ' . $destination);
     }
 
     /**

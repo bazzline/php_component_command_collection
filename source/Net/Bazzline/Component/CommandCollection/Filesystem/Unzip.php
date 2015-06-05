@@ -33,9 +33,9 @@ class Unzip extends Command
     public function unzip($pathToArchive, $outputPath = null)
     {
         if (!is_null($outputPath)) {
-            $command = '/usr/bin/unzip ' . $pathToArchive . ' -d ' . $outputPath;
+            $command = '/usr/bin/env unzip ' . $pathToArchive . ' -d ' . $outputPath;
         } else {
-            $command = '/usr/bin/unzip ' . $pathToArchive;
+            $command = '/usr/bin/env unzip ' . $pathToArchive;
         }
 
         return $this->execute($command);
@@ -49,7 +49,7 @@ class Unzip extends Command
      */
     public function listArchiveContent($pathToArchive)
     {
-        $command = '/usr/bin/unzip -l ' . $pathToArchive;
+        $command = '/usr/bin/env unzip -l ' . $pathToArchive;
 
         return $this->execute($command);
     }
