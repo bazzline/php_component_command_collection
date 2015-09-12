@@ -30,6 +30,14 @@ class Curl extends Command
     }
 
     /**
+     * @param string $header
+     */
+    public function addHeader($header)
+    {
+        $this->prefix .= ' -H "' . $header . '"';
+    }
+
+    /**
      * @param string $url
      * @return array
      */
@@ -92,7 +100,8 @@ class Curl extends Command
             }
         }
 
-        $command .= $arguments . ' -X ' . $method . ' ' . $encodedUrl;
+        $command       .= $arguments . ' -X ' . $method . ' ' . $encodedUrl;
+        $this->prefix   = '';
 
         return $this->execute($command);
     }
