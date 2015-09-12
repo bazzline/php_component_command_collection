@@ -14,6 +14,19 @@ class Curl extends Command
     /** @var string */
     private $prefix = '';
 
+    /**
+     * @param string $url
+     * @param string $method
+     * @param null|mixed $data
+     * @return array
+     * @throws RuntimeException
+     */
+    public function __invoke($url, $method, $data = null)
+    {
+        return $this->send($url, $method, $data);
+    }
+
+
     public function isSilent()
     {
         $this->prefix .= ' -s';
