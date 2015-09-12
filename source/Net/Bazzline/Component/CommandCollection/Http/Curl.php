@@ -27,19 +27,19 @@ class Curl extends Command
     }
 
 
-    public function isSilent()
+    public function beSilent()
     {
         $this->prefix .= ' -s';
-    }
-
-    public function noSslSecurity()
-    {
-        $this->prefix .= ' --ssl-no-revoke';
     }
 
     public function isJson()
     {
         $this->prefix .= ' -H "Accept: application/json" -H "Content-Type: application/json"';
+    }
+
+    public function noSslSecurity()
+    {
+        $this->prefix .= ' --ssl-no-revoke';
     }
 
     /**
@@ -51,44 +51,49 @@ class Curl extends Command
     }
 
     /**
+     * @param string $host
      * @param string $url
      * @return array
      */
-    public function delete($url)
+    public function delete($host, $url)
     {
-        return $this->send($url, 'DELETE');
+        return $this->send($host, $url, 'DELETE');
     }
 
     /**
+     * @param string $host
      * @param string $url
      * @return array
      */
-    public function get($url)
+    public function get($host, $url)
     {
-        return $this->send($url, 'GET');
+        return $this->send($host, $url, 'GET');
     }
 
     /**
-     * @param string $url
-     * @param null|mixed $data
-     * @return array
-     */
-    public function post($url, $data = null)
-    {
-        return $this->send($url, 'POST', $data);
-    }
-
-    /**
+     * @param string $host
      * @param string $url
      * @param null|mixed $data
      * @return array
      */
-    public function put($url, $data = null)
+    public function post($host, $url, $data = null)
     {
-        return $this->send($url, 'PUT', $data);
+        return $this->send($host, $url, 'POST', $data);
     }
 
     /**
+     * @param string $host
+     * @param string $url
+     * @param null|mixed $data
+     * @return array
+     */
+    public function put($host, $url, $data = null)
+    {
+        return $this->send($host, $url, 'PUT', $data);
+    }
+
+    /**
+     * @param string $host
      * @param string $url
      * @param string $method
      * @param null|mixed $data
@@ -96,11 +101,11 @@ class Curl extends Command
      * @throws RuntimeException
      * @todo implement parameter validation
      */
-    public function send($url, $method, $data = null)
+    public function send($host, $url, $method, $data = null)
     {
         $arguments  = $this->prefix;
         $command    = '/usr/bin/curl';
-        $encodedUrl = urlencode($url);
+        $target     = $host . urlencode($url);
 
         if (!is_null($data)) {
             $arguments .= ' -d';
@@ -113,7 +118,7 @@ class Curl extends Command
             }
         }
 
-        $command       .= $arguments . ' -X ' . $method . ' ' . $encodedUrl;
+        $command       .= $arguments . ' -X ' . $method . ' ' . $target;
         $this->prefix   = '';
 
         return $this->execute($command);
