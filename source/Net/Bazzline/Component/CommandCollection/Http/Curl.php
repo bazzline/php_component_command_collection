@@ -14,6 +14,9 @@ class Curl extends Command
     /** @var string */
     private $prefix = '';
 
+    /** @var bool */
+    private $isJson = false;
+
     /**
      * @param string $url
      * @param string $method
@@ -34,7 +37,8 @@ class Curl extends Command
 
     public function isJson()
     {
-        $this->prefix .= ' -H "Accept: application/json" -H "Content-Type: application/json"';
+        $this->isJson   = true;
+        $this->prefix  .= ' -H "Accept: application/json" -H "Content-Type: application/json"';
     }
 
     public function noSslSecurity()
@@ -106,20 +110,25 @@ class Curl extends Command
     {
         $arguments  = $this->prefix;
         $command    = '/usr/bin/curl';
+        $content    = '';
         $target     = $host . str_replace('%2F', '/', urlencode($url));
 
         if (!is_null($data)) {
-            $arguments .= ' -d';
-            if (is_array($data)) {
-                foreach ($data as $key => $value) {
-                    $arguments .= $key . '="' . $value . '"';
-                }
+            if ($this->isJson) {
+                $content .= ' -d \'' . json_encode($data) . '\'';
             } else {
-                $arguments .= $data;
+                if (is_array($data)) {
+                    foreach ($data as $key => $value) {
+                        $content .= ' -d ' . $key . '="' . $value . '"';
+                    }
+                } else {
+                    $content .= ' -d ' . $data;
+                }
             }
         }
 
-        $command       .= $arguments . ' -X ' . $method . ' ' . $target;
+        $command       .= $arguments . ' -X ' . $method . $content . ' ' . $target;
+        $this->isJson   = true;
         $this->prefix   = '';
 
         return $this->execute($command);
