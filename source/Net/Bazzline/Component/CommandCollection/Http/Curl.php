@@ -100,12 +100,13 @@ class Curl extends Command
      * @return array
      * @throws RuntimeException
      * @todo implement parameter validation
+     * @todo add noUrlEncode option
      */
     public function send($host, $url, $method, $data = null)
     {
         $arguments  = $this->prefix;
         $command    = '/usr/bin/curl';
-        $target     = $host . urlencode($url);
+        $target     = $host . str_replace('%2F', '/', urlencode($url));
 
         if (!is_null($data)) {
             $arguments .= ' -d';
