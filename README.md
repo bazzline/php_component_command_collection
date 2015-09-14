@@ -7,6 +7,8 @@ free as in freedom free software collection of system commands
 * upcomming
     * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
     * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
+* [0.0.6](https://github.com/bazzline/php_component_command_collection/tree/0.0.6) - released at 14.09.2015
+    * updated dependency
 * [0.0.5](https://github.com/bazzline/php_component_command_collection/tree/0.0.5) - released at 12.09.2015
     * added [Http/Curl](https://github.com/bazzline/php_component_command_collection/blob/master/source/Net/Bazzline/Component/CommandCollection/Http/Curl.php)
 * [0.0.4](https://github.com/bazzline/php_component_command_collection/tree/0.0.4) - released at 05.06.2015

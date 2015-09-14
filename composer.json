@@ -14,7 +14,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "net_bazzline/php_component_command": "1.0.7",
+        "net_bazzline/php_component_command": "1.0.5",
         "php": ">=5.3.3"
     },
     "require-dev": {
