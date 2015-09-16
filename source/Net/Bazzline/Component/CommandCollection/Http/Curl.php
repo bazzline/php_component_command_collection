@@ -43,6 +43,11 @@ class Curl extends Command
 
     public function noSslSecurity()
     {
+        $this->prefix .= ' --insecure';
+    }
+
+    public function noSslRevoke()
+    {
         $this->prefix .= ' --ssl-no-revoke';
     }
 
