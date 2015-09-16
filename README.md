@@ -7,7 +7,7 @@ free as in freedom free software collection of system commands
 * upcomming
     * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
     * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
-* [0.0.7](https://github.com/bazzline/php_component_command_collection/tree/0.0.7) - released at 15.09.2015
+* [0.0.7](https://github.com/bazzline/php_component_command_collection/tree/0.0.7) - released at 16.09.2015
     * replaced behavior of "Curl::noSslSecurity" and added "Curl::noSslRevoke"
 * [0.0.6](https://github.com/bazzline/php_component_command_collection/tree/0.0.6) - released at 14.09.2015
     * updated dependency
