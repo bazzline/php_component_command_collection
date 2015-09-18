@@ -2,12 +2,25 @@
 
 free as in freedom free software collection of system commands
 
+# Install
+
+## By Hand
+
+    mkdir -p vendor/net_bazzline/php_component_command_collection
+    cd vendor/net_bazzline/php_component_command_collection
+    git clone https://github.com/bazzline/php_component_command_collection .
+
+## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_command_collection)
+
+    composer require net_bazzline/php_component_command_collection:dev-master
+
 # History 
 
 * upcomming
-   @todo
+    @todo
         * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
         * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
+    * added install howto to readme
 * [0.0.7](https://github.com/bazzline/php_component_command_collection/tree/0.0.7) - released at 16.09.2015
     * replaced behavior of "Curl::noSslSecurity" and added "Curl::noSslRevoke"
 * [0.0.6](https://github.com/bazzline/php_component_command_collection/tree/0.0.6) - released at 14.09.2015
