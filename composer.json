@@ -14,13 +14,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "net_bazzline/php_component_command": "1.0.5",
+        "net_bazzline/php_component_command": "1.1.0",
         "php": ">=5.3.3"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.5.0",
         "mockery/mockery": "0.9.4",
-        "phpunit/phpunit": "4.7.6"
+        "phpunit/phpunit": "4.8.*"
     },
     "autoload": {
         "psr-0": {
