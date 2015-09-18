@@ -21,6 +21,9 @@ free as in freedom free software collection of system commands
         * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
         * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
         * fixe issue that __invoke is not fitting to "Command::__invoke()"
+* [0.0.9](https://github.com/bazzline/php_component_command_collection/tree/0.0.9) - released at 18.09.2015
+    * all available commands are now extending from *AbstractCommand*
+    * updated dependencies
 * [0.0.8](https://github.com/bazzline/php_component_command_collection/tree/0.0.8) - released at 18.09.2015
     * added install howto to readme
     * updated dependencies

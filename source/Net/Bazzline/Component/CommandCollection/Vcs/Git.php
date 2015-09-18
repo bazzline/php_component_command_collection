@@ -6,11 +6,11 @@
 
 namespace Net\Bazzline\Component\CommandCollection\Vcs;
 
-use Net\Bazzline\Component\Command\Command;
+use Net\Bazzline\Component\Command\AbstractCommand;
 use Net\Bazzline\Component\Command\InvalidSystemEnvironmentException;
 use Net\Bazzline\Component\Command\RuntimeException;
 
-class Git extends Command
+class Git extends AbstractCommand
 {
     /**
      * @return array

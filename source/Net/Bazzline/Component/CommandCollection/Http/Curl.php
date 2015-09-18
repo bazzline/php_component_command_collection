@@ -5,11 +5,11 @@
  */
 namespace Net\Bazzline\Component\CommandCollection\Http;
 
-use Net\Bazzline\Component\Command\Command;
+use Net\Bazzline\Component\Command\AbstractCommand;
 use Net\Bazzline\Component\Command\InvalidSystemEnvironmentException;
 use Net\Bazzline\Component\Command\RuntimeException;
 
-class Curl extends Command
+class Curl extends AbstractCommand
 {
     /** @var string */
     private $prefix = '';

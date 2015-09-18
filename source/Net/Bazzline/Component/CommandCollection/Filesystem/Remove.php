@@ -6,11 +6,11 @@
 
 namespace Net\Bazzline\Component\CommandCollection\Filesystem;
 
-use Net\Bazzline\Component\Command\Command;
+use Net\Bazzline\Component\Command\AbstractCommand;
 use Net\Bazzline\Component\Command\InvalidSystemEnvironmentException;
 use Net\Bazzline\Component\Command\RuntimeException;
 
-class Remove extends Command
+class Remove extends AbstractCommand
 {
     /**
      * @param string $source
