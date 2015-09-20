@@ -20,7 +20,8 @@ free as in freedom free software collection of system commands
     @todo
         * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
         * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
-        * fixe issue that __invoke is not fitting to "Command::__invoke()"
+* [0.0.10](https://github.com/bazzline/php_component_command_collection/tree/0.0.10) - released at 20.09.2015
+    * added optional *$data* to *Curl::delete*
 * [0.0.9](https://github.com/bazzline/php_component_command_collection/tree/0.0.9) - released at 18.09.2015
     * all available commands are now extending from *AbstractCommand*
     * updated dependencies

@@ -62,11 +62,12 @@ class Curl extends AbstractCommand
     /**
      * @param string $host
      * @param string $url
+     * @param null|mixed $data
      * @return array
      */
-    public function delete($host, $url)
+    public function delete($host, $url, $data = null)
     {
-        return $this->send($host, $url, 'DELETE');
+        return $this->send($host, $url, 'DELETE', $data);
     }
 
     /**
