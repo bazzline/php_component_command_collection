@@ -1,7 +1,16 @@
 {
     "description": "free as in freedom free software collection of system commands",
-    "keywords": ["php", "command", "collection", "php_component_command", "free as in freedom"],
-    "license": "LGPLv3",
+    "keywords": [
+        "bazzline",
+        "psr",
+        "psr-4",
+        "php", 
+        "command", 
+        "collection", 
+        "php_component_command", 
+        "free as in freedom"
+    ],
+    "license": "LGPL-3.0",
     "name": "net_bazzline/php_component_command_collection",
     "type": "library",
     "authors": [
@@ -20,12 +29,16 @@
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
         "mockery/mockery": "0.9.4",
-        "phpunit/phpunit": "~4.8||~5.0"
+        "phpunit/phpunit": "~4.8.0||~5.2.0"
     },
     "autoload": {
-        "psr-0": {
-            "Net\\Bazzline\\Component\\CommandCollection": "source/",
-            "Test\\Net\\Bazzline\\Component\\CommandCollection": "test/"
+        "psr-4": {
+            "Net\\Bazzline\\Component\\CommandCollection\\": "source/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Net\\Bazzline\\Component\\CommandCollection\\": "test/"
         }
     }
 }
