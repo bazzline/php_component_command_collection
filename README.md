@@ -2,6 +2,8 @@
 
 free as in freedom free software collection of system commands
 
+The current change log can be found [here](https://github.com/bazzline/php_component_command_collection/blob/master/CHANGELOG.md).
+
 # Install
 
 ## By Hand
@@ -14,41 +16,14 @@ git clone https://github.com/bazzline/php_component_command_collection .
 
 ## With Packagist
 
-
 ```
 composer require net_bazzline/php_component_command_collection:dev-master
 ```
 
-# History 
+# API
 
-* upcomming
-    @todo
-        * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
-        * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
-    * dropped support for php version below 5.6
-    * relaxed vfsstream development requirement
-* [0.0.11](https://github.com/bazzline/php_component_command_collection/tree/0.0.11) - released at 22.02.2016
-    * moved to psr-4 autoloading
-    * updated dependencies
-* [0.0.10](https://github.com/bazzline/php_component_command_collection/tree/0.0.10) - released at 20.09.2015
-    * added optional *$data* to *Curl::delete*
-* [0.0.9](https://github.com/bazzline/php_component_command_collection/tree/0.0.9) - released at 18.09.2015
-    * all available commands are now extending from *AbstractCommand*
-    * updated dependencies
-* [0.0.8](https://github.com/bazzline/php_component_command_collection/tree/0.0.8) - released at 18.09.2015
-    * added install howto to readme
-    * updated dependencies
-* [0.0.7](https://github.com/bazzline/php_component_command_collection/tree/0.0.7) - released at 16.09.2015
-    * replaced behavior of "Curl::noSslSecurity" and added "Curl::noSslRevoke"
-* [0.0.6](https://github.com/bazzline/php_component_command_collection/tree/0.0.6) - released at 14.09.2015
-    * updated dependency
-* [0.0.5](https://github.com/bazzline/php_component_command_collection/tree/0.0.5) - released at 12.09.2015
-    * added [Http/Curl](https://github.com/bazzline/php_component_command_collection/blob/master/source/Net/Bazzline/Component/CommandCollection/Http/Curl.php)
-* [0.0.4](https://github.com/bazzline/php_component_command_collection/tree/0.0.4) - released at 05.06.2015
-    * replaced "/usr/bin/<command>" with "/usr/bin/env <command>" to extend compatibility with different platforms
-* [0.0.3](https://github.com/bazzline/php_component_command_collection/tree/0.0.3) - released at 26.05.2015
-    * fixed issue with git->create()
-* [0.0.2](https://github.com/bazzline/php_component_command_collection/tree/0.0.2) - released at 26.05.2015
-    * fixed namespace issue with git
-* [0.0.1](https://github.com/bazzline/php_component_command_collection/tree/0.0.1) - released at 26.05.2015
-    * initial release
+[API](http://www.bazzline.net/63a5dfaf3067026536d7176e3500f17a385d79d0/index.html) is available at [bazzline.net](http://www.bazzline.net).
+
+# Final Words
+
+Star it if you like it :-). Add issues if you need it. Pull patches if you enjoy it. Write a blog entry if you use it :-D.
