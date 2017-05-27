@@ -6,13 +6,18 @@ free as in freedom free software collection of system commands
 
 ## By Hand
 
-    mkdir -p vendor/net_bazzline/php_component_command_collection
-    cd vendor/net_bazzline/php_component_command_collection
-    git clone https://github.com/bazzline/php_component_command_collection .
+```
+mkdir -p vendor/net_bazzline/php_component_command_collection
+cd vendor/net_bazzline/php_component_command_collection
+git clone https://github.com/bazzline/php_component_command_collection .
+```
 
-## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_command_collection)
+## With Packagist
 
-    composer require net_bazzline/php_component_command_collection:dev-master
+
+```
+composer require net_bazzline/php_component_command_collection:dev-master
+```
 
 # History 
 
@@ -20,11 +25,11 @@ free as in freedom free software collection of system commands
     @todo
         * [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
         * [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
+    * dropped support for php version below 5.6
     * relaxed vfsstream development requirement
 * [0.0.11](https://github.com/bazzline/php_component_command_collection/tree/0.0.11) - released at 22.02.2016
     * moved to psr-4 autoloading
     * updated dependencies
->>>>>>> dd82ac0c5435e15cb8bdb48eab90ec39cc9e0220
 * [0.0.10](https://github.com/bazzline/php_component_command_collection/tree/0.0.10) - released at 20.09.2015
     * added optional *$data* to *Curl::delete*
 * [0.0.9](https://github.com/bazzline/php_component_command_collection/tree/0.0.9) - released at 18.09.2015
