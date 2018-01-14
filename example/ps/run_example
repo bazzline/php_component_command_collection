@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @author stev leibelt <artodeto@bazzline.net>
+ * @since 2014-12-14 
+ */
+
+use Net\Bazzline\Component\CommandCollection\Process\ProcessSnapshot;
+
+$isWindows = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
+
+try {
+    if ($isWindows) {
+        throw new Exception(
+            'this example needs to be run in an unix environment'
+        );
+    }
+    require_once __DIR__ . '/../../vendor/autoload.php';
+
+    $command = new ProcessSnapshot();
+
+    $lines = $command->ps();
+
+    foreach ($lines as $line) {
+        echo $line . PHP_EOL;
+    }
+} catch (Throwable $throwable) {
+    echo ':: Something went wrong.' . PHP_EOL;
+    echo PHP_EOL;
+    echo '   Throwable class : ' . get_class($throwable) . PHP_EOL;
+    echo '   Throwable message: ' . $throwable->getMessage() . PHP_EOL;
+    echo '   Throwable stack trace as string: ' . $throwable->getTraceAsString() . PHP_EOL;
+}

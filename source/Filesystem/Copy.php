@@ -50,7 +50,13 @@ class Copy extends AbstractCommand
             );
         }
 
-        return $this->execute('/usr/bin/env cp ' . ($recursive ? '-r ' : '') . $source . ' ' . $destination);
+        return $this->execute(
+            '/usr/bin/env cp '
+            . ($recursive ? '-r ' : '')
+            . $source
+            . ' '
+            . $destination
+        );
     }
 
     /**

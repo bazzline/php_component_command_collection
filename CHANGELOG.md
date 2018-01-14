@@ -7,9 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Open]
 
-* [Filesystem/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ls)
-* [Process/ListContent](https://github.com/bazzline/php_component_command/tree/master/example/Example/ps)
-
 ### To Add
 
 ### To Change
@@ -19,6 +16,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 ### Changed
+
+## [1.0.0](https://github.com/bazzline/php_component_command_collection/tree/1.0.0) - released at 2018-01-14
+
+### Added
+
+* Lots of [examples](example).
+
+### Changed
+
+* dropped support for php version below 7.0
+* removed development dependencies to mockery and phpunit since no tests are needed
+* removed .travis.yml since there is nothing to test
 
 ## [0.1.0](https://github.com/bazzline/php_component_command_collection/tree/0.1.0) - released at 2017-05-27
 

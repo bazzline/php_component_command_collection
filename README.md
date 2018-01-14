@@ -2,7 +2,9 @@
 
 free as in freedom free software collection of system commands
 
-The current change log can be found [here](https://github.com/bazzline/php_component_command_collection/blob/master/CHANGELOG.md).
+The current change log can be found [here](CHANGELOG.md)
+
+You can find some demo implementations ready to run [here](example).
 
 # Install
 
