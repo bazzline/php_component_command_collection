@@ -2,6 +2,8 @@
 
 free as in freedom free software collection of system commands
 
+Latest stable release is: [![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_command.svg)](https://packagist.org/packages/net_bazzline/php_component_command_collection).
+
 The current change log can be found [here](CHANGELOG.md)
 
 You can find some demo implementations ready to run [here](example).

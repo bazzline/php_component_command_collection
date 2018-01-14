@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+* added latest release version in the README.md
+
 ### Changed
 
 ## [1.0.0](https://github.com/bazzline/php_component_command_collection/tree/1.0.0) - released at 2018-01-14
