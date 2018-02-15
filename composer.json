@@ -11,7 +11,7 @@
         "php_component_command", 
         "free as in freedom"
     ],
-    "license": "LGPL-3.0",
+    "license": "LGPL-3.0-only",
     "name": "net_bazzline/php_component_command_collection",
     "type": "library",
     "authors": [
