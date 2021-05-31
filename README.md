@@ -1,3 +1,7 @@
+# Full Stop
+
+I still like the idea but there is currently no use case to develop it anymore.
+
 # Command Collection for Php command collection
 
 free as in freedom free software collection of system commands
